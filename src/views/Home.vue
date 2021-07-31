@@ -5,6 +5,7 @@
       <tile title="permissions"/>
       <tile title="settings"/>
       <tile title="payments"/>
+      <tile title="degrees" size="medium"/>
       <tile title="students" size="large"/>
     </tiles-group>
   </div>

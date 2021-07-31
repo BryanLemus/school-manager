@@ -14,12 +14,9 @@ export default defineComponent({
 
 <style lang="scss">
 .TilesGroup {
-  padding: 1rem;
   display: grid;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
-  grid-auto-rows: 128px;
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
   grid-gap: 1rem;
-  margin-top: 1rem;
 }
 </style>
