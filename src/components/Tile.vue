@@ -35,9 +35,9 @@ export default defineComponent({
 <style lang="scss">
 .Tile {
   display: grid;
-  grid-template-rows: auto 1fr auto;
   border-radius: 0.5rem;
   padding: 0.5rem;
+  user-select: none;
   background-color: #e9e9e9; // testing
   /* elements */
   &-title {
@@ -71,12 +71,12 @@ export default defineComponent({
   &--medium {
     grid-column: span 2;
     grid-row: span 1;
-    aspect-ratio: 2/1
+    aspect-ratio: 0;
   }
   &--large {
     grid-column: span 2;
     grid-row: span 2;
-    aspect-ratio: 2/2
+    aspect-ratio: 2/2;
   }
 }
 </style>
