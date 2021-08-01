@@ -1,5 +1,9 @@
 <template>
-  <div class="Tile" :class="[`Tile--${size}`, color ? `Tile--${color}` : '']">
+  <div
+    class="Tile"
+    :class="[`Tile--${size}`, color ? `Tile--${color}` : '']"
+    :style="{ backgroundImage: background ? `url(${background})` : '' }"
+  >
     <div class="Tile-title">
       {{ title }}
     </div>
@@ -24,26 +28,27 @@ export default defineComponent({
     icon: { type: String, default: "arrow-right" },
     color: { type: String },
   },
-  computed: {
-    bkgImage(): any {
-      return require(this.background);
-    },
-  },
 });
 </script>
 
 <style lang="scss">
 .Tile {
   display: grid;
+  grid-template-rows: auto 1fr auto;
   border-radius: 0.5rem;
   padding: 0.5rem;
   user-select: none;
+  //background-image: url("../assets/images/test4.jpg");
   background-color: #e9e9e9; // testing
   /* elements */
   &-title {
     grid-row: 1/2;
     font-size: 1rem;
     font-weight: 500;
+    background-origin: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   &-content {
     grid-row: 2/3;
