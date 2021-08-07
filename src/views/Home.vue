@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <tiles-group>
+    <tiles-view>
       <tile title="users" :background="require('@/assets/images/test4.jpg')" />
       <tile
         title="permissions"
@@ -14,17 +14,17 @@
         :background="require('@/assets/images/test2.jpg')"
       />
       <tile title="students" size="large" :background="require('@/assets/images/test1.jpg')"/>
-    </tiles-group>
+    </tiles-view>
   </div>
 </template>
 
 <script lang="ts">
 import Tile from "@/components/Tile.vue";
-import TilesGroup from "@/components/TilesGroup.vue";
+import TilesView from "@/components/TilesView.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  components: { Tile, TilesGroup },
+  components: { Tile, TilesView },
   name: "Home",
 });
 </script>

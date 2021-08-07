@@ -1,5 +1,5 @@
 <template>
-  <div class="TilesGroup">
+  <div class="TilesView">
     <slot />
   </div>
 </template>
@@ -8,12 +8,12 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "TilesGroup",
+  name: "TilesView",
 });
 </script>
 
 <style lang="scss">
-.TilesGroup {
+.TilesView {
   display: grid;
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));

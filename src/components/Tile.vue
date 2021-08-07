@@ -38,8 +38,8 @@ export default defineComponent({
   border-radius: 0.5rem;
   padding: 0.5rem;
   user-select: none;
-  //background-image: url("../assets/images/test4.jpg");
   background-color: #e9e9e9; // testing
+
   /* elements */
   &-title {
     grid-row: 1/2;
