@@ -70,17 +70,14 @@ export default defineComponent({
   &--small {
     grid-column: span 1;
     grid-row: span 1;
-    aspect-ratio: 4/3;
   }
   &--medium {
     grid-column: span 2;
     grid-row: span 1;
-    aspect-ratio: 16/5;
   }
   &--large {
     grid-column: span 2;
     grid-row: span 2;
-    aspect-ratio: 13/12;
   }
 }
 </style>
