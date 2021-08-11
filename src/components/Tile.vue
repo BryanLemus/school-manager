@@ -49,6 +49,7 @@ export default defineComponent({
     grid-row: 1/2;
     font-size: 1.2rem;
     font-weight: 600;
+    text-overflow: ellipsis;
   }
   &-content {
     grid-row: 2/3;

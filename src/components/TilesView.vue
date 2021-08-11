@@ -17,7 +17,7 @@ export default defineComponent({
   display: grid;
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fill, 9rem);
-  grid-auto-rows: 9rem;
+  grid-auto-rows: minmax(9rem, auto);
   grid-gap: 1rem;
   justify-content: center;
 }
