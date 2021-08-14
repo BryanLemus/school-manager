@@ -1,0 +1,33 @@
+.Navbar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  background-color: hsla(0, 0%, 96%, 0.9);
+  backdrop-filter: blur(16px);
+  overflow: hidden;
+}
+
+.NavbarItem {
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 0.3rem;
+  margin: 0.25rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0.25rem;
+  &-icon {
+    font-size: 14pt;
+  }
+  &-title {
+    overflow: hidden;
+    font-size: 0.65rem;
+    text-align: center;
+    font-weight: 500;
+    grid-row: 2;
+  }
+
+  &--selected {
+    color: rgb(84, 82, 204);
+    background-color: hsla(0, 0%, 86%, 0.9);
+  }
+}

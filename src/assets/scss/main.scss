@@ -1,0 +1,18 @@
+
+@import 'base/_reset';
+
+@import 'abstracts/_variables';
+@import 'abstracts/_mixins';
+@import 'abstracts/_functions';
+
+@import 'base/_typography';
+
+@import 'pages/_home';
+
+@import 'components/_tile';
+@import 'components/_navbar';
+
+
+body {
+  margin: 0;
+}
