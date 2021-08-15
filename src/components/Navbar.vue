@@ -4,8 +4,8 @@
       class="NavbarItem"
       v-for="(item, index) in items"
       :key="index"
-      :class="{ 'NavbarItem--selected': (selected === index) }"
-      @click="select(index)"
+      :class="{ 'NavbarItem--selected': selected.value === item.value }"
+      @click="select(item)"
     >
       <div class="NavbarItem-icon">
         <font-awesome-icon :icon="item.icon" />
@@ -21,23 +21,27 @@
 interface NavbarItem {
   title: string;
   icon: string;
+  value: string;
   isSelected: boolean;
 }
+import router from "@/router";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Navbar",
   data() {
     return {
-      selected: this.items?.findIndex((x) => x.isSelected === true),
+      selected: this.items?.find((x) => x.isSelected === true),
     };
   },
   props: {
+    value: String,
     items: Array as () => NavbarItem[],
   },
   methods: {
-    select(index: number): void {
-      this.selected = index;
+    select(item: NavbarItem): void {
+      this.selected = item;
+      router.push({ name: item.value });
     },
   },
 });

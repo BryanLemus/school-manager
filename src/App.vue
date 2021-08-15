@@ -1,12 +1,12 @@
 <template>
-  <router-view />
+  <router-view style="grid-row: 2" />
   <navbar
     :items="[
-      { title: 'Home', icon: 'home', isSelected: true },
-      { title: 'Users', icon: 'users' },
-      { title: 'Students', icon: 'user-graduate' },
-      { title: 'Inventory', icon: 'boxes' },
-      { title: 'Expenses', icon: 'receipt' },
+      { value: 'Home', title: 'Home', icon: 'home', isSelected: true },
+      { value: 'users', title: 'Users', icon: 'users' },
+      { value: 'students', title: 'Students', icon: 'user-graduate' },
+      { value: 'inventory', title: 'Inventory', icon: 'boxes' },
+      { value: 'expenses', title: 'Expenses', icon: 'receipt' },
     ]"
   />
 </template>
@@ -22,16 +22,4 @@ export default defineComponent({
 
 <style lang="scss">
 @import "./assets/scss/main.scss";
-
-#app {
-  display: grid;
-  grid-template-rows: calc(100% + 51px) auto;
-  row-gap: 0.5rem;
-  .Navbar {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  }
-}
 </style>

@@ -1,17 +1,17 @@
+@import "base/_reset";
 
-@import 'base/_reset';
+@import "abstracts/_variables";
+@import "abstracts/_mixins";
+@import "abstracts/_functions";
 
-@import 'abstracts/_variables';
-@import 'abstracts/_mixins';
-@import 'abstracts/_functions';
+@import "base/_typography";
 
-@import 'base/_typography';
+@import "pages/_home";
 
-@import 'pages/_home';
+@import "components/_tile";
+@import "components/_navbar";
 
-@import 'components/_tile';
-@import 'components/_navbar';
-
+@import "layout/layout";
 
 body {
   margin: 0;
