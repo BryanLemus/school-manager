@@ -16,7 +16,7 @@ export default defineComponent({
 .TilesView {
   display: grid;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill, 9rem);
+  grid-template-columns: repeat(auto-fit, 9rem);
   grid-auto-rows: minmax(9rem, auto);
   grid-gap: 1rem;
   justify-content: center;

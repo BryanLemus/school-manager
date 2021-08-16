@@ -26,7 +26,7 @@ export default defineComponent({
     size: { type: String, default: "small" },
     background: { type: String, default: "" },
     icon: { type: String, default: "arrow-right" },
-    color: { type: String, default: "blue" },
+    color: { type: String },
   },
 });
 </script>

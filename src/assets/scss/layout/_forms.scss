@@ -1,0 +1,10 @@
+button {
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background-color: whitesmoke;
+  &:hover {
+    transition: 0.2s;
+    background-color: gainsboro;
+  }
+}

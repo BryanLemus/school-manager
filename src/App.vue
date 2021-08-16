@@ -1,5 +1,16 @@
 <template>
-  <router-view style="grid-row: 2" />
+  <appbar>
+    <template v-slot:left>
+      <label class="subtitle1">Logo</label>
+    </template>
+    <template v-slot:right>
+      <button>Sign Up</button>
+      <button>Sing In</button>
+    </template>
+  </appbar>
+  <div class="view">
+    <router-view style="grid-row: 2" />
+  </div>
   <navbar
     :items="[
       { value: 'Home', title: 'Home', icon: 'home', isSelected: true },
@@ -13,10 +24,11 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Appbar from "./components/Appbar.vue";
 import Navbar from "./components/Navbar.vue";
 
 export default defineComponent({
-  components: { Navbar },
+  components: { Navbar, Appbar },
 });
 </script>
 

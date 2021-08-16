@@ -5,66 +5,66 @@
 }
 
 h1 {
-  font-size: map-get($map: $mdc-typography-styles-headline1, $key: font-size);
+  font-size: map-get($map: $mdc-typography-styles-headline1, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-headline1, $key: font-weight);
 }
 
 h2 {
-  font-size: map-get($map: $mdc-typography-styles-headline2, $key: font-size);
+  font-size: map-get($map: $mdc-typography-styles-headline2, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-headline2, $key: font-weight);
 }
 
 h3 {
-  font-size: map-get($map: $mdc-typography-styles-headline3, $key: font-size);
+  font-size: map-get($map: $mdc-typography-styles-headline3, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-headline3, $key: font-weight);
 }
 
 h4 {
-  font-size: map-get($map: $mdc-typography-styles-headline4, $key: font-size);
+  font-size: map-get($map: $mdc-typography-styles-headline4, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-headline4, $key: font-weight);
 }
 
 h5 {
-  font-size: map-get($map: $mdc-typography-styles-headline5, $key: font-size);
+  font-size: map-get($map: $mdc-typography-styles-headline5, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-headline5, $key: font-weight);
 }
 
 h6 {
-  font-size: map-get($map: $mdc-typography-styles-headline6, $key: font-size);
+  font-size: map-get($map: $mdc-typography-styles-headline6, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-headline6, $key: font-weight);
 }
 
 .body1 {
-  font-size: map-get($map: $mdc-typography-styles-body1, $key: font-size);
+  font-size: map-get($map: $mdc-typography-styles-body1, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-body1, $key: font-weight);
 }
 
 .body2 {
-  font-size: map-get($map: $mdc-typography-styles-body2, $key: font-size);
+  font-size: map-get($map: $mdc-typography-styles-body2, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-body2, $key: font-weight);
 }
 
 .subtitle1 {
-  font-size: map-get($map: $mdc-typography-styles-subtitle1, $key: font-size);
+  font-size: map-get($map: $mdc-typography-styles-subtitle1, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-subtitle1, $key: font-weight);
 }
 
 .subtitle2 {
-  font-size: map-get($map: $mdc-typography-styles-subtitle2, $key: font-size);
+  font-size: map-get($map: $mdc-typography-styles-subtitle2, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-subtitle2, $key: font-weight);
 }
 
-.button {
-  font-size: map-get($map: $mdc-typography-styles-button, $key: font-size);
+button {
+  font-size: map-get($map: $mdc-typography-styles-button, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-button, $key: font-weight);
 }
 
 .caption {
-  font-size: map-get($map: $mdc-typography-styles-caption, $key: font-size);
+  font-size: map-get($map: $mdc-typography-styles-caption, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-caption, $key: font-weight);
 }
 
 .overline {
-  font-size: map-get($map: $mdc-typography-styles-overline, $key: font-size);
+  font-size: map-get($map: $mdc-typography-styles-overline, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-overline, $key: font-weight);
 }

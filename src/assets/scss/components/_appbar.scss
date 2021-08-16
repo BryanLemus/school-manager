@@ -1,0 +1,27 @@
+.Appbar {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 4px;
+  background-color: white;
+  overflow: hidden;
+  &-left,
+  &-middle,
+  &-right {
+    display: flex;
+    gap: 4px;
+    margin: 4px;
+    padding: 4px;
+  }
+
+  &-left {
+    grid-column: 1;
+  }
+  &-middle {
+    grid-column: 2;
+  }
+  &-right {
+    grid-column: 3;
+  }
+}

@@ -6,9 +6,9 @@
         color="mint"
         background="https://image.freepik.com/free-photo/stack-random-rectangles-hovering-space-flat-surface_23-2148319016.jpg"
       />
-      <tile title="Permissions"/>
+      <tile title="Permissions" color="mint"/>
       <tile title="Grades" size="medium" color="orange" />
-      <tile title="Students" size="large" />
+      <tile title="Students" size="large" color="indigo"/>
       <tile title="Degrees" size="medium" color="red" />
       <tile title="Degrees" size="medium" color="yellow" />
     </tiles-view>
