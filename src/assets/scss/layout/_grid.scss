@@ -11,14 +11,15 @@
     grid-row: 1;
     z-index: 1;
   }
-  .view {
-    grid-row: 2;
-  }
   .Navbar {
     position: fixed;
     left: 0;
     bottom: 0;
     grid-row: 3;
     width: 100%;
+  }
+  h3 {
+    padding: 1rem;
+    margin: 0;
   }
 }
