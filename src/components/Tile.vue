@@ -1,8 +1,8 @@
 <template>
   <div
     class="Tile"
-    :class="[`Tile--${size}`, `Tile--${color}`]"
-    :style="{ backgroundImage: background ? `url(${background})` : '' }"
+    :class="`Tile--${size}`"
+    :style="{ background: background, color: color }"
   >
     <div class="Tile-title">
       {{ title }}
@@ -24,9 +24,9 @@ export default defineComponent({
   props: {
     title: { type: String, required: true },
     size: { type: String, default: "small" },
-    background: { type: String, default: "" },
     icon: { type: String, default: "arrow-right" },
-    color: { type: String },
+    background: { type: String, default: "whitesmoke" },
+    color: { type: String, default: "black" },
   },
 });
 </script>

@@ -1,15 +1,12 @@
 @use "@/assets/scss/abstracts/_variables.scss" as variables;
 
 .Tile {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 1rem;
   padding: 1rem;
   user-select: none;
-  background-color: whitesmoke;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 
   /* elements */
   &-title {
@@ -17,15 +14,13 @@
     font-size: 1.2rem;
     font-weight: 600;
     text-overflow: ellipsis;
-    text-shadow: 1px 1px 2px black;
   }
   &-content {
     grid-row: 2/3;
   }
   &-icon {
     grid-row: 3/4;
-    align-self: end;
-    justify-self: end;
+    align-self: flex-end;
     width: 1rem;
     height: 1rem;
     background-color: #fffc;
@@ -39,23 +34,16 @@
   &--small {
     grid-column: span 1;
     grid-row: span 1;
+    aspect-ratio: 1;
   }
   &--medium {
     grid-column: span 2;
     grid-row: span 1;
+    aspect-ratio: 12/5;
   }
   &--large {
     grid-column: span 2;
     grid-row: span 2;
-  }
-
-  /* Colors */
-  @each $name, $color in variables.$colors {
-    &--#{$name} {
-      background-color: $color;
-      .Tile-title {
-        color: white;
-      }
-    }
+    aspect-ratio: 1;
   }
 }
