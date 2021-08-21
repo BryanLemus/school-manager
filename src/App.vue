@@ -1,7 +1,7 @@
 <template>
   <appbar>
     <template v-slot:left>
-      <label class="subtitle1">Logo</label>
+      <img src="./assets/images/logo.svg">
     </template>
     <template v-slot:right>
       <button>Sign Up</button>

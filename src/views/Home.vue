@@ -3,17 +3,9 @@
     <h3>Hi Bryan!</h3>
 
     <tiles-view>
-      <tile title="Users" size="large"/>
-      <tile title="Payroll"/>
-      <tile title="Permissions"/>
-      <tile title="Users" size="large"/>
-      <tile title="Payroll" size="medium"/>
-      <tile title="Users" size="large"/>
-      <tile title="Payroll"/>
-      <tile title="Permissions"/>
-      <tile title="Users" size="large"/>
-      <tile title="Payroll"/>
-      <tile title="Permissions"/>
+      <tile title="Users" size="large" background="#D5ECC2"/>
+      <tile title="Payroll" background="#F6DFEB"/>
+      <tile title="Roles" background="#F1ECC3"/>
     </tiles-view>
   </div>
 </template>
