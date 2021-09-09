@@ -1,47 +1,46 @@
 <template>
-  <div class="Navbar">
-    <div
-      class="NavbarItem"
-      v-for="(item, index) in items"
-      :key="index"
-      :class="{ 'NavbarItem--selected': selected.value === item.value }"
-      @click="select(item)"
-    >
-      <div class="NavbarItem-icon">
-        <font-awesome-icon :icon="item.icon" />
-      </div>
-      <label class="NavbarItem-title">
-        {{ item.title }}
-      </label>
-    </div>
-  </div>
+  <nav class="Navbar">
+    <navbar-link
+      v-for="link in links"
+      :key="link.route"
+      :to="link.route"
+      :text="link.text"
+      :icon="link.icon"
+      :selected="link.selected"
+      @click="select(link)"
+    />
+  </nav>
 </template>
 
 <script lang="ts">
-interface NavbarItem {
-  title: string;
+interface NavbarLink {
+  route: string;
+  text: string;
   icon: string;
-  value: string;
-  isSelected: boolean;
+  selected: boolean;
 }
 import router from "@/router";
 import { defineComponent } from "vue";
+import NavbarLink from "./NavbarLink.vue";
 
 export default defineComponent({
+  components: { NavbarLink },
   name: "Navbar",
   data() {
     return {
-      selected: this.items?.find((x) => x.isSelected === true),
+      selected: this.links?.find((x) => x.selected === true) as NavbarLink,
     };
   },
+
   props: {
-    value: String,
-    items: Array as () => NavbarItem[],
+    value: Object as () => NavbarLink,
+    links: Array as () => NavbarLink[],
   },
+
   methods: {
-    select(item: NavbarItem): void {
-      this.selected = item;
-      router.push({ name: item.value });
+    select(link: NavbarLink): void {
+      this.selected = link;
+      console.log(link.route === this.selected.route);
     },
   },
 });

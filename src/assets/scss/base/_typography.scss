@@ -4,32 +4,32 @@
   font-family: Inter;
 }
 
-h1 {
+.headline1 {
   font-size: map-get($map: $mdc-typography-styles-headline1, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-headline1, $key: font-weight);
 }
 
-h2 {
+.headline2 {
   font-size: map-get($map: $mdc-typography-styles-headline2, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-headline2, $key: font-weight);
 }
 
-h3 {
+.headline3 {
   font-size: map-get($map: $mdc-typography-styles-headline3, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-headline3, $key: font-weight);
 }
 
-h4 {
+.headline4 {
   font-size: map-get($map: $mdc-typography-styles-headline4, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-headline4, $key: font-weight);
 }
 
-h5 {
+.headline5 {
   font-size: map-get($map: $mdc-typography-styles-headline5, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-headline5, $key: font-weight);
 }
 
-h6 {
+.headline6 {
   font-size: map-get($map: $mdc-typography-styles-headline6, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-headline6, $key: font-weight);
 }
@@ -54,7 +54,7 @@ h6 {
   font-weight: map-get($map: $mdc-typography-styles-subtitle2, $key: font-weight);
 }
 
-button {
+button, .button {
   font-size: map-get($map: $mdc-typography-styles-button, $key: font-size) + px;
   font-weight: map-get($map: $mdc-typography-styles-button, $key: font-weight);
 }

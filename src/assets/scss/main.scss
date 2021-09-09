@@ -1,17 +1,19 @@
-@import "base/_reset";
+@import "abstracts/_functions.scss";
+@import "abstracts/_mixins.scss";
+@import "abstracts/_variables.scss";
 
-@import "abstracts/_variables";
-@import "abstracts/_mixins";
-@import "abstracts/_functions";
+@import "base/_reset.scss";
+@import "base/_typography.scss";
 
-@import "base/_typography";
+@import "pages/_home.scss";
 
-@import "pages/_home";
+@import "components/_appbar.scss";
+@import "components/_navbar.scss";
+@import "components/_navbarLink.scss";
+@import "components/_stage.scss";
+@import "components/_stageView.scss";
+@import "components/_tile.scss";
+@import "components/_tilesView.scss";
 
-@import "components/_tilesView";
-@import "components/_tile";
-@import "components/_navbar";
-@import "components/appbar";
-
-@import "layout/_grid";
-@import "layout/_forms";
+@import "layout/_forms.scss";
+@import "layout/_grid.scss";

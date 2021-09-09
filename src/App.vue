@@ -10,10 +10,10 @@
   </appbar>
   <router-view style="grid-row: 2" />
   <navbar
-    :items="[
-      { value: 'Home', title: 'Home', icon: 'home', isSelected: true },
-      { value: 'messages', title: 'Messages', icon: 'comments' },
-      { value: 'settings', title: 'Settings', icon: 'cog' },
+    :links="[
+      { route: '/', text: 'Dashboard', icon: 'home', selected: true },
+      { route: 'messages', text: 'Messages', icon: 'comments' },
+      { route: 'settings', text: 'Settings', icon: 'cog' },
     ]"
   />
 </template>
