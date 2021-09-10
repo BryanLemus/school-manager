@@ -4,14 +4,14 @@
     :class="`Tile--${size}`"
     :style="{ background: background, color: color }"
   >
+    <div class="Tile-icon" :style="{color: background}">
+      <font-awesome-icon :icon="icon" />
+    </div>
     <div class="Tile-title">
       {{ title }}
     </div>
     <div class="Tile-content">
       <slot />
-    </div>
-    <div class="Tile-icon">
-      <font-awesome-icon :icon="icon" />
     </div>
   </div>
 </template>

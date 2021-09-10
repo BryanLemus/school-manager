@@ -7,9 +7,6 @@
       <tile title="Users" icon="users" background="#EEF9BF">
         Manage, create, delete app users.
       </tile>
-      <tile title="School" icon="school" background="#CDF0EA">
-        Amenities, classrooms and another resources.
-      </tile>
       <tile title="Finances" icon="coins" background="#F9D89C">
         Incomes, expenses, and student's payments.
       </tile>
@@ -17,9 +14,18 @@
 
     <label class="headline6">Acedemic</label>
     <tiles-view>
-      <tile title="Students" background="#F1ECC3" />
-      <tile title="Teachers" background="#F6DFEB" size="medium" />
-      <tile title="Classes" background="#FCDEC0" />
+      <tile title="Students" icon="user-graduate" background="#F1ECC3">
+        Create, delete and manage students.
+      </tile>
+      <tile title="Teachers" icon="chalkboard-teacher" background="#F6DFEB">
+        Hire and manage teachers.
+      </tile>
+      <tile title="Courses and study plans" icon="book-reader" background="#FCDEC0" size="medium">
+        Create and edit study plans and subjects content.
+      </tile>
+      <tile title="Groups" icon="school" background="#CDBBA7" size="medium">
+        Create and manage students groups and schedules.
+      </tile>
     </tiles-view>
   </div>
 </template>
