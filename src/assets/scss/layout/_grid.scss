@@ -1,20 +1,16 @@
 #app {
   display: grid;
   grid-auto-rows: auto;
-  row-gap: 0.5rem;
-  grid-template-rows: 54px auto 61px;
+  grid-template-rows: auto 1fr auto;
   .Appbar {
-    position: fixed;
-    left: 0;
-    top: 0;
     width: 100%;
     grid-row: 1;
     z-index: 1;
   }
+  .view{
+    overflow: scroll;
+  }
   .Navbar {
-    position: fixed;
-    left: 0;
-    bottom: 0;
     grid-row: 3;
     width: 100%;
   }
