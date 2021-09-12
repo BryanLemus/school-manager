@@ -1,7 +1,6 @@
 .Stage {
-  display: flex;
+  min-width: 100vw;
+  scroll-snap-align: start;
   overflow-y: auto;
   overflow-x: hidden;
-  scroll-snap-align: start;
-  -webkit-overflow-scrolling: touch;
 }

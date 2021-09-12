@@ -1,26 +1,26 @@
 <template>
   <div class="home">
-    <label class="headline3">Hi Bryan!</label>
-
-    <label class="headline6">Manage</label>
-    <tiles-view>
-      <tile title="Users" icon="users" background="#EEF9BF">
-        Manage, create, delete app users.
-      </tile>
-      <tile title="Finances" icon="coins" background="#F9D89C">
-        Incomes, expenses, and student's payments.
-      </tile>
-    </tiles-view>
+    <label class="headline3">Welcome to the dashboard</label>
 
     <label class="headline6">Acedemic</label>
     <tiles-view>
-      <tile title="Students" icon="user-graduate" background="#F1ECC3">
+      <tile
+        title="Students"
+        icon="user-graduate"
+        background="#F1ECC3"
+        @click="this.$router.push('/students')"
+      >
         Create, delete and manage students.
       </tile>
       <tile title="Teachers" icon="chalkboard-teacher" background="#F6DFEB">
         Hire and manage teachers.
       </tile>
-      <tile title="Courses and study plans" icon="book-reader" background="#FCDEC0" size="medium">
+      <tile
+        title="Courses and study plans"
+        icon="book-reader"
+        background="#FCDEC0"
+        size="medium"
+      >
         Create and edit study plans and subjects content.
       </tile>
       <tile title="Groups" icon="school" background="#CDBBA7" size="medium">

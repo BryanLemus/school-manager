@@ -1,14 +1,20 @@
 <template>
   <appbar>
     <template v-slot:left>
-      <img src="./assets/images/logo.svg">
+      <img src="./assets/images/logo.svg" />
     </template>
     <template v-slot:right>
       <button>Sign Up</button>
       <button>Sing In</button>
     </template>
   </appbar>
-  <router-view style="grid-row: 2" />
+
+  <router-view v-slot="{ Component, route }">
+    <transition :name="route.meta.transition || 'fade'" mode="out-in">
+      <component :is="Component" />
+    </transition>
+  </router-view>
+
   <navbar
     :links="[
       { route: '/', text: 'Dashboard', icon: 'home', selected: true },
@@ -30,4 +36,14 @@ export default defineComponent({
 
 <style lang="scss">
 @import "./assets/scss/main.scss";
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>

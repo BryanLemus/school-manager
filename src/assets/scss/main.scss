@@ -2,16 +2,18 @@
 @import "abstracts/_mixins.scss";
 @import "abstracts/_variables.scss";
 
+@import "base/app.scss";
 @import "base/_reset.scss";
 @import "base/_typography.scss";
 
 @import "pages/_home.scss";
+@import "pages/_students.scss";
 
 @import "components/_appbar.scss";
 @import "components/_navbar.scss";
 @import "components/_navbarLink.scss";
 @import "components/_stage.scss";
-@import "components/_stageView.scss";
+@import "components/_stagedView.scss";
 @import "components/_tile.scss";
 @import "components/_tilesView.scss";
 
