@@ -1,5 +1,5 @@
 <template>
   <div class="Stage">
-    <slot />
+    <slot/>
   </div>
 </template>

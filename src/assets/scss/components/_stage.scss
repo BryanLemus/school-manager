@@ -1,5 +1,5 @@
 .Stage {
-  min-width: 100vw;
+  min-width: -webkit-fill-available;
   scroll-snap-align: start;
   overflow-y: auto;
   overflow-x: hidden;
