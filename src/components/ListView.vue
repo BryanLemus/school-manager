@@ -6,7 +6,7 @@
       :selected="selection.includes(item)"
       @click="select(item)"
     >
-      <slot name="data" :item="item" />
+      <slot name="model" :item="item" />
     </list-item>
   </ul>
 </template>
@@ -25,7 +25,7 @@ export default defineComponent({
   },
   props: {
     value: Array as () => object[],
-    dataKey: String,
+    dataKey: { type: String, default: "id" },
     items: Array,
     selectMode: {
       type: String,
@@ -38,30 +38,27 @@ export default defineComponent({
     // select a ListItem
     select(item: object): void {
       // get current selected items
-      let selectedItems = this.selection;
+      const selectedItems = this.selection;
       switch (this.selectMode) {
         case "single":
           // clear selected items
-          selectedItems.splice(0).push(item);
-          // set value
-          this.selection = selectedItems;
+          selectedItems.splice(0);
+          // add item to selection
+          selectedItems.push(item);
           break;
 
         case "multiple":
           // verify if item exists
           selectedItems.includes(item)
-            ? // if true, remove it
+            ? // if true, remove from selection
               selectedItems.splice(selectedItems.indexOf(item), 1)
-            : // else, add it
+            : // else, add to selection
               selectedItems.push(item);
-          // set value
-          this.selection = selectedItems;
           break;
 
         default:
           // return an Error
           throw new Error("Invalid selection mode");
-          break;
       }
     },
   },

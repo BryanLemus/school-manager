@@ -1,6 +1,11 @@
 .Stage {
-  min-width: -webkit-fill-available;
   scroll-snap-align: start;
   overflow-y: auto;
   overflow-x: hidden;
+  flex: 1 0 18rem;
+  padding: 1em;
+  min-width: -webkit-fill-available;
+  &:last-child{
+    flex-grow: 10;
+  }
 }

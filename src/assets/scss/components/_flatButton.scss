@@ -1,0 +1,17 @@
+.FlatButton {
+  border: none;
+  border-radius: $base-radius;
+  padding: 12px;
+  background-color: hsl(0, 0, 97%);
+  transition: 0.2s;
+
+  &:hover {
+    background-color: hsl(0, 0, 95%);
+  }
+  &:active {
+    background-color: hsl(0, 0, 90%);
+  }
+  label {
+    margin-left: 12px;
+  }
+}

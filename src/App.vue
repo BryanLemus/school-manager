@@ -4,8 +4,7 @@
       <img src="./assets/images/logo.svg" />
     </template>
     <template v-slot:right>
-      <button>Sign Up</button>
-      <button>Sing In</button>
+      <button>Username</button>
     </template>
   </appbar>
 

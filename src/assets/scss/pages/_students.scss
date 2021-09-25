@@ -1,14 +1,16 @@
 .students {
   display: inherit;
   grid-row: 2;
-}
-
-#students_list {
-  display: grid;
-  grid-template-rows: auto auto 1fr auto;
-  padding: 1em;
-
-  input {
-    padding: 1em;
+  .Stage {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 8px;
+    .ListView {
+      overflow-y: auto;
+      .studentItem{
+        display: grid;
+        gap: 4px ;
+      }
+    }
   }
 }

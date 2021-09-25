@@ -1,19 +1,3 @@
-// Colors
-$colors: (
-  "red": rgb(255, 59, 48),
-  "blue": rgb(0, 112, 245),
-  "brown": rgb(152, 122, 84),
-  "cyan": rgb(65, 175, 220),
-  "gray": rgb(132, 132, 132),
-  "green": rgb(30, 195, 55),
-  "indigo": rgb(84, 82, 204),
-  "mint": rgb(0, 189, 180),
-  "orange": rgb(245, 139, 0),
-  "pink": rgb(245, 35, 75),
-  "teal": rgb(46, 167, 189),
-  "yellow": rgb(245, 194, 0),
-);
-
 $mdc-typography-styles-headline1: (
   font-family: unquote("Inter"),
   font-size: 96,
@@ -79,3 +63,5 @@ $mdc-typography-styles-caption: (
   font-size: 12,
   font-weight: 400,
 );
+
+$base-radius : 12px;

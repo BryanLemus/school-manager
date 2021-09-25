@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <label class="headline3">Welcome to the dashboard</label>
+    <label class="headline3">Welcome to dashboard</label>
 
     <label class="headline6">Acedemic</label>
     <tiles-view>
