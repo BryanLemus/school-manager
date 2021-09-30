@@ -9,13 +9,19 @@
             <div class="studentItem">
               <label>{{ slotProps.item.firstname }}</label>
               <label>{{ slotProps.item.lastname }}</label>
-              <label>{{
-                slotProps.item.birthday.getMonth() +
-                "-" +
-                slotProps.item.birthday.getDate() +
-                "-" +
-                slotProps.item.birthday.getFullYear()
-              }}</label>
+            </div>
+          </template>
+        </list-view>
+        <flat-button icon="plus" text="Add student" />
+      </stage>
+      <stage>
+        <label class="headline3">Students</label>
+        <input-box type="search" placeholder="Find students" />
+        <list-view :items="students">
+          <template v-slot:model="slotProps">
+            <div class="studentItem">
+              <label>{{ slotProps.item.firstname }}</label>
+              <label>{{ slotProps.item.lastname }}</label>
             </div>
           </template>
         </list-view>

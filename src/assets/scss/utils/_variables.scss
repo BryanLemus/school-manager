@@ -64,4 +64,19 @@ $mdc-typography-styles-caption: (
   font-weight: 400,
 );
 
-$base-radius : 12px;
+$base-radius: 12px;
+
+$breakpoints: (
+  "small": (
+    min-width: 500px,
+  ),
+  "medium": (
+    min-width: 800px,
+  ),
+  "large": (
+    min-width: 1000px,
+  ),
+  "huge": (
+    min-width: 1200px,
+  ),
+);

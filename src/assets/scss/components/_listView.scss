@@ -2,4 +2,15 @@
   @include hideScrollBars;
   margin: 0;
   padding: 0;
+  &--selectable {
+    .ListItem {
+      transition: 0.2s;
+      &:hover {
+        background-color: hsl(0, 0, 95%);
+      }
+      &:active {
+        background-color: hsl(0, 0, 90%);
+      }
+    }
+  }
 }

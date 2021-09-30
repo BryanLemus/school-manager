@@ -5,8 +5,13 @@
     display: grid;
     grid-template-rows: auto auto 1fr auto;
     gap: 8px;
+    /* Adjust content to small screens */
+    .InputBox input{
+      width: 100%;
+    }
     .ListView {
       overflow-y: auto;
+      width: 100%;
       .studentItem{
         display: grid;
         gap: 4px ;

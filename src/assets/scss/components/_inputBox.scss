@@ -9,8 +9,7 @@
     padding: 0 6px;
   }
   input {
-    flex-basis: 18rem;
-    flex-grow: 1;
+    flex: 1 1 14rem;
     outline: none;
     border: none;
     border-radius: $base-radius;

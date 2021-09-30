@@ -1,11 +1,19 @@
 .Stage {
+  @include respond-to("small") {
+    min-width: 50vw;
+    flex: 0 0 16rem;
+  }
+  @include respond-to("medium"){
+    min-width: auto;
+    flex: 0 0 16rem;
+    &:last-child{
+      flex-grow: 1;
+    }
+  }
+  box-sizing: border-box;
   scroll-snap-align: start;
   overflow-y: auto;
   overflow-x: hidden;
-  flex: 1 0 18rem;
-  padding: 1em;
-  min-width: -webkit-fill-available;
-  &:last-child{
-    flex-grow: 10;
-  }
+  min-width: 100vw;
+  padding: 0.5em;
 }

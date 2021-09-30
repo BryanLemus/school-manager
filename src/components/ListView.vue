@@ -1,5 +1,8 @@
 <template>
-  <ul class="ListView">
+  <ul
+    class="ListView"
+    :class="{ 'ListView--selectable': selectMode !== 'none' }"
+  >
     <list-item
       v-for="item in items"
       :key="item[dataKey]"
@@ -31,7 +34,7 @@ export default defineComponent({
       type: String,
       default: "single",
       validator: (selectionMode: string): boolean =>
-        ["single", "multiple"].indexOf(selectionMode) !== -1,
+        ["single", "multiple", "none"].indexOf(selectionMode) !== -1,
     },
   },
   methods: {
