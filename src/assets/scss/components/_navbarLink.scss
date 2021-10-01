@@ -8,18 +8,17 @@
   text-align: center;
   border-radius: $base-radius;
   gap: 2px;
-  margin: 4px;
   padding: 8px;
   color: #333;
 
   label {
+    @extend .button;
     display: block;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     text-align: center;
     padding: 2px 0;
-    @extend .button;
   }
 
   svg {
@@ -30,5 +29,10 @@
     transition: 0.2s;
     color: rgb(84, 82, 204);
     background-color: hsla(0, 0%, 86%, 0.6);
+  }
+
+  &-wide{
+    flex-direction: row;
+    gap: 8px;
   }
 }

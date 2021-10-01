@@ -15,21 +15,9 @@
         <flat-button icon="plus" text="Add student" />
       </stage>
       <stage>
-        <label class="headline3">Students</label>
-        <input-box type="search" placeholder="Find students" />
-        <list-view :items="students">
-          <template v-slot:model="slotProps">
-            <div class="studentItem">
-              <label>{{ slotProps.item.firstname }}</label>
-              <label>{{ slotProps.item.lastname }}</label>
-            </div>
-          </template>
-        </list-view>
-        <flat-button icon="plus" text="Add student" />
-      </stage>
-      <stage>
-        <label class="headline3">Edit Student</label>
-        Selected student form
+        <label class="headline3">student name</label>
+        <input-box label="First Name:"/>
+        <input-box label="Last Name:"/>
       </stage>
     </staged-view>
   </div>
