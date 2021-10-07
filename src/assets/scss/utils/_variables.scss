@@ -68,13 +68,13 @@ $base-radius: 12px;
 
 $breakpoints: (
   "small": (
-    min-width: 500px,
+    min-width: 256px,
   ),
   "medium": (
-    min-width: 800px,
+    min-width: 500px,
   ),
   "large": (
-    min-width: 1000px,
+    min-width: 1024px,
   ),
   "huge": (
     min-width: 1200px,

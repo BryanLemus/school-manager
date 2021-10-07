@@ -14,11 +14,11 @@
     </transition>
   </router-view>
 
-  <navbar
+  <navigation
     :links="[
-      { route: '/', text: 'Dashboard', icon: 'home', selected: true },
-      { route: 'messages', text: 'Messages', icon: 'comments' },
-      { route: 'settings', text: 'Settings', icon: 'cog' },
+      { value: '/', label: 'Home', icon: 'home', selected: true },
+      { value: 'messages', label: 'Messages', icon: 'comments' },
+      { value: 'settings', label: 'Settings', icon: 'cog' },
     ]"
   />
 </template>
@@ -26,10 +26,10 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Appbar from "./components/Appbar.vue";
-import Navbar from "./components/Navbar.vue";
+import Navigation from "./components/Navigation.vue";
 
 export default defineComponent({
-  components: { Navbar, Appbar },
+  components: { Navigation, Appbar },
 });
 </script>
 

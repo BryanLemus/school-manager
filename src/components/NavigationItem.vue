@@ -1,18 +1,21 @@
 <template>
-  <router-link class="NavbarLink" :to="to" :aria-selected="selected">
+  <div
+    class="NavigationItem"
+    :class="{ 'NavigationItem--selected': selected }"
+  >
     <font-awesome-icon :icon="icon" />
-    <label>{{ text }}</label>
-  </router-link>
+    <label>{{ label }}</label>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "NavbarLink",
+  name: "NavigationItem",
   props: {
-    to: String,
-    text: String,
+    value: {type: String, required: true},
+    label: String,
     icon: String,
     selected: { type: Boolean, default: false },
   },

@@ -1,15 +1,18 @@
-.NavbarLink {
+.NavigationItem {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   text-decoration: none;
   text-align: center;
   border-radius: $base-radius;
-  gap: 2px;
-  padding: 8px;
+  gap: 8px;
+  padding: 12px;
   color: #333;
+  width: 100%;
+  @include noUserSelect;
+  @include click-effect;
 
   label {
     @extend .button;
@@ -19,20 +22,16 @@
     overflow: hidden;
     text-align: center;
     padding: 2px 0;
+    flex-basis: 160px;
   }
 
   svg {
     font-size: 24px;
   }
 
-  &[aria-selected="true"] {
+  &--selected {
     transition: 0.2s;
-    color: rgb(84, 82, 204);
+    color: hsl(226, 75%, 55%);
     background-color: hsla(0, 0%, 86%, 0.6);
-  }
-
-  &-wide{
-    flex-direction: row;
-    gap: 8px;
   }
 }

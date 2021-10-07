@@ -1,0 +1,9 @@
+.Navigation {
+  display: flex;
+  flex: 1 0 50px;
+  flex-wrap: wrap;
+  padding: 8px;
+  align-content: space-evenly;
+  overflow: auto;
+  gap: 8px;
+}
