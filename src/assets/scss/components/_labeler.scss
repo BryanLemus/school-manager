@@ -1,0 +1,12 @@
+.Labeler {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  &-label {
+    font-weight: 500;
+    flex: 1 0 260px;
+  }
+  &-content {
+    flex: 1 0 260px;
+  }
+}

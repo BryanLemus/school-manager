@@ -1,21 +1,33 @@
 .students {
-  display: inherit;
-  grid-row: 2;
-  .Stage {
+  display: grid;
+  grid-template-columns: auto 1fr 280px;
+  padding: 0 12px;
+  gap: 12px;
+
+  #groups_list {
+    grid-column: 1;
     display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    gap: 8px;
-    /* Adjust content to small screens */
-    .InputBox input{
-      width: 100%;
-    }
+    grid-template-rows: auto 1fr;
+    gap: 12px;
     .ListView {
+      grid-row: 2;
       overflow-y: auto;
-      width: 100%;
-      .studentItem{
+      .groupItem {
         display: grid;
-        gap: 4px ;
+        grid-template-columns: auto auto auto;
+        gap: 8px;
       }
     }
+  }
+
+  #students_list {
+    grid-column: 2;
+    overflow-y: auto;
+  }
+
+  #student_options {
+    grid-column: 3;
+    overflow-y: auto;
+    height: fit-content;
   }
 }

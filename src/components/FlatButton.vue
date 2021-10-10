@@ -1,7 +1,7 @@
 <template>
   <button class="FlatButton">
-    <font-awesome-icon :icon="icon" />
-    <label>{{ text }}</label>
+    <font-awesome-icon v-if="icon !== undefined" :icon="icon" />
+    <label v-if="text !== undefined">{{ text }}</label>
   </button>
 </template>
 

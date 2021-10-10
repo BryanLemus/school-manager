@@ -3,9 +3,8 @@
   list-style: none;
   padding: 12px;
   border-radius: $base-radius;
-  margin: 4px 0;
-
-  &[aria-selected="true"]{
-    background-color: hsl(0, 0, 97%);
+  margin: 6px 0;
+  &--selected {
+    background-color: hsl(0, 0%, 97%);
   }
 }

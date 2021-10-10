@@ -1,12 +1,13 @@
 .FlatButton {
+  display: flex;
+  align-items: center;
   border: none;
   border-radius: $base-radius;
   padding: 12px;
   background-color: hsl(0, 0, 97%);
   transition: 0.2s;
+  outline: none;
+  @include noUserSelect;
   @include click-effect;
-
-  label {
-    margin-left: 12px;
-  }
+  gap: 12px;
 }

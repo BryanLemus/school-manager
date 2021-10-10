@@ -1,6 +1,6 @@
 <template>
   <div class="InputBox">
-    <label class="InputBox-label" v-if="label !== undefined"
+    <label class="InputBox-label"
       >{{ label }}
       <input :name="name" :type="type" :placeholder="placeholder" />
     </label>

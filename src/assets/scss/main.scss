@@ -2,7 +2,6 @@
 @import "utils/_mixins.scss";
 @import "utils/_variables.scss";
 
-@import "base/app.scss";
 @import "base/_reset.scss";
 @import "base/_typography.scss";
 
@@ -10,8 +9,11 @@
 @import "pages/_students.scss";
 
 @import "components/_appbar.scss";
+@import "components/arrowSelect.scss";
+@import "components/datagrid.scss";
 @import "components/_flatButton.scss";
 @import "components/_inputBox.scss";
+@import "components/_labeler.scss";
 @import "components/_listItem.scss";
 @import "components/_listView.scss";
 @import "components/_navigation.scss";
@@ -20,6 +22,7 @@
 @import "components/_stagedView.scss";
 @import "components/_tile.scss";
 @import "components/_tilesView.scss";
+@import "components/_toolbar.scss";
 
 @import "layout/_forms.scss";
 @import "layout/_grid.scss";

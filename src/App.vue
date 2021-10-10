@@ -1,10 +1,10 @@
 <template>
   <appbar>
     <template v-slot:left>
-      <img src="./assets/images/logo.svg" />
+      <img id="logo" src="./assets/images/logo.svg" />
     </template>
     <template v-slot:right>
-      <button>Username</button>
+      <flat-button icon="user" text="@username"/>
     </template>
   </appbar>
 
@@ -13,23 +13,16 @@
       <component :is="Component" />
     </transition>
   </router-view>
-
-  <navigation
-    :links="[
-      { value: '/', label: 'Home', icon: 'home', selected: true },
-      { value: 'messages', label: 'Messages', icon: 'comments' },
-      { value: 'settings', label: 'Settings', icon: 'cog' },
-    ]"
-  />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import Appbar from "./components/Appbar.vue";
 import Navigation from "./components/Navigation.vue";
+import FlatButton from "./components/FlatButton.vue";
 
 export default defineComponent({
-  components: { Navigation, Appbar },
+  components: { Navigation, Appbar, FlatButton },
 });
 </script>
 

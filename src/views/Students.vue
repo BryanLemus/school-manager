@@ -1,38 +1,61 @@
 <template>
   <div class="students">
-    <staged-view>
-      <stage>
-        <label class="headline3">Students</label>
-        <input-box type="search" placeholder="Find students" />
-        <list-view :items="students">
-          <template v-slot:model="slotProps">
-            <div class="studentItem">
-              <label>{{ slotProps.item.firstname }}</label>
-              <label>{{ slotProps.item.lastname }}</label>
-            </div>
-          </template>
-        </list-view>
-        <flat-button icon="plus" text="Add student" />
-      </stage>
-      <stage>
-        <label class="headline3">student name</label>
-        <input-box label="First Name:"/>
-        <input-box label="Last Name:"/>
-      </stage>
-    </staged-view>
+    <div id="groups_list">
+      <labeler label="School Year:">
+        <arrow-select
+          :items="[2022, 2023, 2024, 2025, 2026, 2027, 2028]"
+          :value="2022"
+        />
+      </labeler>
+      <list-view :items="groups">
+        <template v-slot:model="slotProps">
+          {{ slotProps.item.grade }}
+          {{ slotProps.item.speciality }}
+          {{ slotProps.item.section }}
+        </template>
+      </list-view>
+    </div>
+
+    <tiles-view id="student_options">
+      <tile title="Payments" icon="money-check">
+        Fees control and another transactions.
+      </tile>
+      <tile title="Degrees" icon="award">
+        Subjects Degrees and report cards.
+      </tile>
+      <tile title="Personal Data" icon="address-card" size="medium">
+        Student's Data.
+      </tile>
+    </tiles-view>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ListView from "@/components/ListView.vue";
-import Stage from "@/components/Stage.vue";
-import StagedView from "@/components/StagedView.vue";
 import InputBox from "@/components/InputBox.vue";
 import FlatButton from "@/components/FlatButton.vue";
+import Toolbar from "@/components/Toolbar.vue";
+import ListView from "@/components/ListView.vue";
+import StagedView from "@/components/StagedView.vue";
+import Stage from "@/components/Stage.vue";
+import TilesView from "@/components/TilesView.vue";
+import Tile from "@/components/Tile.vue";
+import ArrowSelect from "@/components/ArrowSelect.vue";
+import Labeler from "@/components/Labeler.vue";
 
 export default defineComponent({
-  components: { StagedView, Stage, ListView, InputBox, FlatButton },
+  components: {
+    InputBox,
+    FlatButton,
+    Toolbar,
+    ListView,
+    StagedView,
+    Stage,
+    TilesView,
+    Tile,
+    ArrowSelect,
+    Labeler,
+  },
   name: "Students",
   data() {
     return {
@@ -103,6 +126,13 @@ export default defineComponent({
           lastname: "lastname10",
           birthday: new Date("2004-12-01"),
         },
+      ],
+      groups: [
+        { grade: "1st Grade", speciality: "", section: "A" },
+        { grade: "2nd Grade", speciality: "", section: "A" },
+        { grade: "11th Grade", speciality: "Accountant", section: "A" },
+        { grade: "3rd Grade", speciality: "", section: "A" },
+        { grade: "1st Grade", speciality: "", section: "B" },
       ],
     };
   },

@@ -1,0 +1,33 @@
+.ArrowSelect {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0, 97%);
+  border-radius: 12px;
+  gap: 12px;
+
+  &-BackButton {
+    border-radius: 12px 0 0 12px;
+  }
+
+  &-NextButton {
+    border-radius: 0 12px 12px 0;
+  }
+
+  &-BackButton,
+  &-NextButton {
+    @include click-effect;
+    padding: 12px 16px;
+    border: none;
+    outline: none;
+    background-color: hsl(0, 0, 97%)
+  }
+
+  &-Value {
+    @include noUserSelect;
+    padding: 12px;
+    text-align: center;
+    flex-grow: 1;
+  }
+}

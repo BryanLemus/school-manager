@@ -1,5 +1,5 @@
 <template>
-  <li class="ListItem" :aria-selected="selected">
+  <li class="ListItem" :class="{ 'ListItem--selected': selected }">
     <slot />
   </li>
 </template>
