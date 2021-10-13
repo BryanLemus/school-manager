@@ -15,6 +15,6 @@
   }
 
   #logo {
-    @include noUserSelect;
+    @include no-selectable;
   }
 }

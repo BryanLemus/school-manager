@@ -6,12 +6,12 @@
   overflow: hidden;
   text-decoration: none;
   text-align: center;
-  border-radius: $base-radius;
+  border-radius: 12px;
   gap: 8px;
   padding: 12px;
   color: #333;
   width: 100%;
-  @include noUserSelect;
+  @include no-selectable;
   @include click-effect;
 
   label {

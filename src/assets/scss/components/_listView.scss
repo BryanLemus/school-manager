@@ -1,14 +1,11 @@
 .ListView {
-  @include hideScrollBars;
   margin: 0;
   padding: 0;
+  @include hide-scrollbars;
   &--selectable {
     .ListItem {
       transition: 0.2s;
-      @include click-effect;
-      &:first-child {
-        margin: 0 0 4px 0;
-      }
+      @include select-effect;
     }
   }
 }

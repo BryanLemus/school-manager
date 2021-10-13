@@ -1,19 +1,25 @@
 <template>
   <div class="students">
     <div id="groups_list">
+      <label class="headline5">Sections</label>
       <labeler label="School Year:">
         <arrow-select
           :items="[2022, 2023, 2024, 2025, 2026, 2027, 2028]"
           :value="2022"
         />
       </labeler>
-      <list-view :items="groups">
-        <template v-slot:model="slotProps">
-          {{ slotProps.item.grade }}
-          {{ slotProps.item.speciality }}
-          {{ slotProps.item.section }}
-        </template>
-      </list-view>
+      <div class="paper">
+        <list-view :items="groups">
+          <template v-slot:model="slotProps">
+            <labeler :label="slotProps.item.grade">
+              <label v-if="slotProps.item.speciality">{{
+                slotProps.item.speciality + " · "
+              }}</label>
+              <label> {{ "Section " + slotProps.item.section }}</label>
+            </labeler>
+          </template>
+        </list-view>
+      </div>
     </div>
 
     <tiles-view id="student_options">
@@ -129,10 +135,22 @@ export default defineComponent({
       ],
       groups: [
         { grade: "1st Grade", speciality: "", section: "A" },
-        { grade: "2nd Grade", speciality: "", section: "A" },
-        { grade: "11th Grade", speciality: "Accountant", section: "A" },
-        { grade: "3rd Grade", speciality: "", section: "A" },
         { grade: "1st Grade", speciality: "", section: "B" },
+        { grade: "2nd Grade", speciality: "", section: "A" },
+        { grade: "3rd Grade", speciality: "", section: "A" },
+        { grade: "3rd Grade", speciality: "", section: "A" },
+        { grade: "4th Grade", speciality: "", section: "A" },
+        { grade: "5th Grade", speciality: "", section: "A" },
+        { grade: "6th Grade", speciality: "", section: "A" },
+        { grade: "7th Grade", speciality: "", section: "A" },
+        { grade: "8th Grade", speciality: "", section: "A" },
+        { grade: "9th Grade", speciality: "", section: "A" },
+        { grade: "10th Grade", speciality: "Accountant", section: "A" },
+        { grade: "10th Grade", speciality: "Electric", section: "B" },
+        { grade: "10th Grade", speciality: "Nursery", section: "C" },
+        { grade: "11th Grade", speciality: "Accountant", section: "A" },
+        { grade: "11th Grade", speciality: "Electric", section: "B" },
+        { grade: "11th Grade", speciality: "Nursery", section: "C" },
       ],
     };
   },

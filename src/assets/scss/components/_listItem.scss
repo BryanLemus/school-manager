@@ -1,10 +1,13 @@
 .ListItem {
-  @include noUserSelect;
+  @include no-selectable;
   list-style: none;
   padding: 12px;
-  border-radius: $base-radius;
+  border-radius: 12px;
   margin: 6px 0;
+  &:first-child {
+    margin: 0 0 4px 0;
+  }
   &--selected {
-    background-color: hsl(0, 0%, 97%);
+    background-color: hsla(0, 0%, 100%, 0.6);
   }
 }

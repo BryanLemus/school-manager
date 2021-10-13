@@ -1,4 +1,4 @@
-@mixin hideScrollBars {
+@mixin hide-scrollbars {
   -ms-text-overflow-style: none;
   scrollbar-width: none;
   &::-webkit-scrollbar {
@@ -6,7 +6,7 @@
   }
 }
 
-@mixin noUserSelect {
+@mixin no-selectable {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -17,11 +17,21 @@
 }
 
 @mixin click-effect {
-  &:hover {
-    background-color: hsl(0, 0, 95%);
+  &:active {
+    background-color: hsla(0, 0, 85%, 0.5);
+  }
+}
+
+@mixin select-effect {
+  &--selected {
+    transition: 0.2s;
+    background-color: hsla(0, 0%, 90%, 0.5);
   }
   &:active {
-    background-color: hsl(0, 0, 90%);
+    background-color: hsla(0, 0%, 85%, 0.5);
+  }
+  &:not(&--selected):hover {
+    background-color: hsla(0, 0%, 96%, 0.5);
   }
 }
 

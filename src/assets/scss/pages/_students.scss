@@ -7,15 +7,37 @@
   #groups_list {
     grid-column: 1;
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto 1fr;
+    border-radius: 12px;
+    padding: 12px;
+    overflow-y: auto;
     gap: 12px;
-    .ListView {
+    .headline {
+      grid-row: 1;
+    }
+    .Labeler {
       grid-row: 2;
+    }
+    .paper {
+      border-radius: 12px;
+      grid-row: 3;
       overflow-y: auto;
-      .groupItem {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 8px;
+      @include hide-scrollbars;
+    }
+
+    table {
+      border-spacing: 12px;
+      border-collapse: collapse;
+      text-align: left;
+      td,
+      th {
+        padding: 12px 6px;
+        line-height: 1;
+        text-align: left;
+        @include no-selectable;
+      }
+      tbody tr {
+        @include select-effect;
       }
     }
   }
