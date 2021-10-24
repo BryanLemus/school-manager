@@ -1,12 +1,11 @@
 <template>
-  <appbar>
-    <template v-slot:left>
-      <img id="logo" src="./assets/images/logo.svg" />
-    </template>
-    <template v-slot:right>
-      <flat-button icon="user" text="@username"/>
-    </template>
-  </appbar>
+  <sidebar
+    mode="compact"
+    :links="[
+      { value: '/', icon: 'home', label: 'Home' },
+      { value: '/students', icon: 'user-graduate', label: 'Students' },
+    ]"
+  />
 
   <router-view class="view" v-slot="{ Component, route }">
     <transition :name="route.meta.transition || 'fade'" mode="out-in">
@@ -20,9 +19,10 @@ import { defineComponent } from "vue";
 import Appbar from "./components/Appbar.vue";
 import Navigation from "./components/Navigation.vue";
 import FlatButton from "./components/FlatButton.vue";
+import Sidebar from "./components/Sidebar.vue";
 
 export default defineComponent({
-  components: { Navigation, Appbar, FlatButton },
+  components: { Navigation, Appbar, FlatButton, Sidebar },
 });
 </script>
 

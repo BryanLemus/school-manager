@@ -1,55 +1,35 @@
 .students {
   display: grid;
-  grid-template-columns: auto 1fr 280px;
-  padding: 0 12px;
-  gap: 12px;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 16px;
 
   #groups_list {
+    grid-row: 2/3;
     grid-column: 1;
     display: grid;
-    grid-template-rows: auto auto 1fr;
-    border-radius: 12px;
-    padding: 12px;
+    grid-template-rows: auto 1fr;
     overflow-y: auto;
-    gap: 12px;
-    .headline {
+    gap: 1rem;
+    .Labeler {
       grid-row: 1;
     }
-    .Labeler {
-      grid-row: 2;
-    }
     .paper {
+      grid-row: 2;
       border-radius: 12px;
-      grid-row: 3;
       overflow-y: auto;
       @include hide-scrollbars;
     }
-
-    table {
-      border-spacing: 12px;
-      border-collapse: collapse;
-      text-align: left;
-      td,
-      th {
-        padding: 12px 6px;
-        line-height: 1;
-        text-align: left;
-        @include no-selectable;
-      }
-      tbody tr {
-        @include select-effect;
-      }
-    }
   }
 
-  #students_list {
-    grid-column: 2;
-    overflow-y: auto;
+  .Toolbar {
+    grid-row: 1;
+    grid-column: 1/3;
+    margin-top: 4px;
   }
 
-  #student_options {
-    grid-column: 3;
-    overflow-y: auto;
-    height: fit-content;
+  .Datagrid {
+    grid-row: 2/3;
+    grid-column: 2/3;
   }
 }

@@ -1,7 +1,7 @@
 .Labeler {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: $spacing/2;
   &-label {
     font-weight: 500;
     flex: 1 0 260px;

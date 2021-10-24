@@ -5,14 +5,13 @@
     flex-grow: 1;
     align-items: center;
     font-size: 1rem;
-    padding: 0 6px;
     gap: 8px;
   }
   input {
     outline: none;
     border: none;
-    border-radius: 12px;
+    border-radius: $spacing;
     background-color: hsl(0, 0%, 97%);
-    padding: 12px;
+    padding: $spacing;
   }
 }

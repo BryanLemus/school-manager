@@ -3,24 +3,30 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  background-color: hsla(0, 0%, 97%, 0.6);
-  border-radius: 24px;
-  gap: 12px;
+  background-color: hsl(0, 0%, 98.5%);
+  border-radius: $spacing;
+  gap: $spacing;
 
   &-BackButton,
   &-NextButton {
     @include click-effect;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    padding: $spacing $spacing * 1.5;
     border: none;
     outline: none;
     background: none;
   }
 
+  &-BackButton {
+    border-radius: $spacing 0 0 $spacing;
+  }
+
+  &-NextButton {
+    border-radius: 0 $spacing $spacing 0;
+  }
+
   &-Value {
     @include no-selectable;
-    padding: 12px;
+    padding: $spacing;
     text-align: center;
     flex-grow: 1;
   }

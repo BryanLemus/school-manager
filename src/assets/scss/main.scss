@@ -10,7 +10,9 @@
 
 @import "components/_appbar.scss";
 @import "components/arrowSelect.scss";
-@import "components/datagrid.scss";
+@import "components/_datagrid.scss";
+@import "components/_datagridCell.scss";
+@import "components/_datagridHeader.scss";
 @import "components/_flatButton.scss";
 @import "components/_inputBox.scss";
 @import "components/_labeler.scss";
@@ -18,6 +20,7 @@
 @import "components/_listView.scss";
 @import "components/_navigation.scss";
 @import "components/_navigationItem.scss";
+@import "components/_sidebar.scss";
 @import "components/_stage.scss";
 @import "components/_stagedView.scss";
 @import "components/_tile.scss";

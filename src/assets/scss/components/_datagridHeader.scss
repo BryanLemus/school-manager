@@ -1,0 +1,14 @@
+.DatagridHeader {
+  background-color: hsl(0, 0%, 97%);
+  border-collapse: collapse;
+  text-align: left;
+  padding: $spacing * 1.2 $spacing;
+  font-weight: 400;
+  color: hsl(0, 0%, 40%);
+  &:first-child {
+    border-radius: $spacing 0 0 $spacing;
+  }
+  &:last-child {
+    border-radius: 0 $spacing $spacing 0;
+  }
+}

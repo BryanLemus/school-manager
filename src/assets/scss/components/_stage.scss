@@ -1,12 +1,12 @@
 .Stage {
   @include respond-to("medium") {
     min-width: 50vw;
-    flex: 0 0 16rem;
+    flex: 0 0 $spacing;
   }
-  @include respond-to("large"){
+  @include respond-to("large") {
     min-width: auto;
-    flex: 0 0 16rem;
-    &:last-child{
+    flex: 0 0 $spacing;
+    &:last-child {
       flex-grow: 1;
     }
   }
@@ -15,6 +15,6 @@
   overflow-y: auto;
   overflow-x: hidden;
   min-width: 100vw;
-  padding: 0.5em;
+  padding: $spacing/2;
   @include hide-scrollbars;
 }

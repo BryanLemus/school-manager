@@ -1,7 +1,7 @@
 <template>
   <button class="FlatButton">
     <font-awesome-icon v-if="icon !== undefined" :icon="icon" />
-    <label v-if="text !== undefined">{{ text }}</label>
+    <label v-if="label !== undefined">{{ label }}</label>
   </button>
 </template>
 
@@ -12,7 +12,7 @@ export default defineComponent({
   name: "FlatButton",
   props: {
     icon: String,
-    text: String,
+    label: String,
   },
 });
 </script>

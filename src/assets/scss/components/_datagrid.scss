@@ -1,0 +1,12 @@
+.Datagrid {
+  overflow: auto;
+  @include hide-scrollbars;
+  table {
+    table-layout: fixed;
+    border-spacing: 0 8px;
+    width: 100%;
+    tr {
+      @include select-effect;
+    }
+  }
+}

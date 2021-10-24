@@ -1,20 +1,19 @@
 #app {
   display: grid;
-  grid-auto-rows: auto;
-  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
   padding: 12px;
-  gap: 12px;
+  gap: 16px;
   grid-row: 1/2;
   height: 100vh;
   width: 100vw;
   box-sizing: border-box;
 
-  .view {
-    grid-row: 2/3;
-    overflow-y: auto;
+  .Sidebar {
+    grid-column: 1;
   }
 
-  #logo {
-    @include no-selectable;
+  .view {
+    grid-column: 2;
+    overflow-y: auto;
   }
 }

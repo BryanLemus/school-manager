@@ -2,12 +2,12 @@
   display: flex;
   align-items: center;
   border: none;
-  border-radius: 12px;
-  padding: 12px;
+  border-radius: $spacing;
+  padding: $spacing;
   background-color: hsl(0, 0, 97%);
   transition: 0.2s;
   outline: none;
   @include no-selectable;
   @include click-effect;
-  gap: 12px;
+  gap: $spacing;
 }

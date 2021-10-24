@@ -1,16 +1,16 @@
 .NavigationItem {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
   overflow: hidden;
   text-decoration: none;
   text-align: center;
-  border-radius: 12px;
-  gap: 8px;
-  padding: 12px;
+  border-radius: $spacing;
+  column-gap: $spacing;
+  row-gap: $spacing;
+  padding: $spacing;
   color: #333;
-  width: 100%;
+  width: auto;
   @include no-selectable;
   @include click-effect;
 
@@ -20,13 +20,11 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    text-align: center;
     padding: 2px 0;
-    flex-basis: 160px;
   }
 
   svg {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   &--selected {
