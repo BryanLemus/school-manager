@@ -20,6 +20,9 @@ export default defineComponent({
       selected: this.items.find((item) => (item = this.value)),
     };
   },
+  mounted() {
+    this.$emit("input", this.selected);
+  },
   props: {
     value: { type: [String, Number, Object], required: true },
     items: { type: Array, required: true },
@@ -34,7 +37,7 @@ export default defineComponent({
     },
     back(): void {
       let current = this.items.findIndex((item) => item === this.selected);
-      if (current - 1 > 0) {
+      if (current - 1 >= 0) {
         this.selected = this.items[current - 1];
         this.$emit("input", this.selected);
       }

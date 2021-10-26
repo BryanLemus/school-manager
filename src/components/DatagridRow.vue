@@ -5,11 +5,6 @@
     </td>
     <slot />
   </tr>
-  <tr v-if="selected" class="DatagridRow-Details">
-    <td :colspan="columnSpan">
-      <slot name="details" />
-    </td>
-  </tr>
 </template>
 
 <script lang="ts">
@@ -20,12 +15,6 @@ export default defineComponent({
   props: {
     selectable: Boolean,
     selected: Boolean,
-  },
-  computed: {
-    columnSpan(): number | undefined {
-      console.log(this.$slots.default?.length);
-      return this.$slots.default?.length;
-    },
   },
 });
 </script>

@@ -1,0 +1,8 @@
+.DatagridRow {
+  &--selected {
+    td {
+      transition: 0.2s;
+      background-color: hsla(0, 0%, 90%, 0.5);
+    }
+  }
+}

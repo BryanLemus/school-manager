@@ -3,10 +3,13 @@
   @include hide-scrollbars;
   table {
     table-layout: fixed;
-    border-spacing: 0 8px;
     width: 100%;
-    tr {
-      @include select-effect;
+    border-spacing: 0 4px;
+    body tr {
+      margin: 4px;
+    }
+    tr:hover {
+      background-color: hsla(0, 0%, 96%, 0.5);
     }
   }
 }

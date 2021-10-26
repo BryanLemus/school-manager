@@ -10,8 +10,8 @@
     <div id="groups_list">
       <labeler label="School Year:">
         <arrow-select
-          :items="[2022, 2023, 2024, 2025, 2026, 2027, 2028]"
           value="2022"
+          :items="[2022, 2023, 2024, 2025, 2026, 2027, 2028]"
         />
       </labeler>
       <div class="paper">
@@ -35,6 +35,7 @@
         { text: 'First Name', value: 'firstname' },
         { text: 'Last Name', value: 'lastname' },
       ]"
+      selectMode="multiple"
     />
   </div>
 </template>
@@ -153,17 +154,17 @@ export default defineComponent({
         },
       ],
       groups: [
-        { grade: "1st Grade", speciality: "", section: "A" },
-        { grade: "1st Grade", speciality: "", section: "B" },
-        { grade: "2nd Grade", speciality: "", section: "A" },
-        { grade: "3rd Grade", speciality: "", section: "A" },
-        { grade: "3rd Grade", speciality: "", section: "B" },
-        { grade: "4th Grade", speciality: "", section: "A" },
-        { grade: "5th Grade", speciality: "", section: "A" },
-        { grade: "6th Grade", speciality: "", section: "A" },
-        { grade: "7th Grade", speciality: "", section: "A" },
-        { grade: "8th Grade", speciality: "", section: "A" },
-        { grade: "9th Grade", speciality: "", section: "A" },
+        { grade: "1st Grade", section: "A" },
+        { grade: "1st Grade", section: "B" },
+        { grade: "2nd Grade", section: "A" },
+        { grade: "3rd Grade", section: "A" },
+        { grade: "3rd Grade", section: "B" },
+        { grade: "4th Grade", section: "A" },
+        { grade: "5th Grade", section: "A" },
+        { grade: "6th Grade", section: "A" },
+        { grade: "7th Grade", section: "A" },
+        { grade: "8th Grade", section: "A" },
+        { grade: "9th Grade", section: "A" },
         { grade: "10th Grade", speciality: "Accountant", section: "A" },
         { grade: "10th Grade", speciality: "Electric", section: "B" },
         { grade: "10th Grade", speciality: "Nursery", section: "C" },
