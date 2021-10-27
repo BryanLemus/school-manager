@@ -2,13 +2,10 @@
   overflow: auto;
   @include hide-scrollbars;
   table {
-    table-layout: fixed;
     width: 100%;
-    border-spacing: 0 4px;
-    body tr {
-      margin: 4px;
-    }
+    border-spacing: 0 2px;
     tr:hover {
+      transition: 0.2s;
       background-color: hsla(0, 0%, 96%, 0.5);
     }
   }

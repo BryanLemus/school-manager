@@ -3,25 +3,27 @@
   cursor: pointer;
   box-sizing: border-box;
   @include no-selectable;
-  &-showState{
+  &-showState {
     padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   &-input {
     outline: none;
     border: none;
     border-radius: 8px;
     background: white;
-    height: 100%;
-    width: 100%;
-    width: -webkit-fill-available;
     margin: 0;
     padding: 8px 10px;
     box-shadow: 1px 1px 3px hsl(0, 0%, 80%);
+    width: 100%; // For Firefox and Edge Legacy
+    width: -webkit-fill-available; // For Chromium and webkit based browsers
   }
   &:first-child {
-    border-radius: $spacing 0 0 $spacing;
+    border-radius: 12px 0 0 12px;
   }
   &:last-child {
-    border-radius: 0 $spacing $spacing 0;
+    border-radius: 0 12px 12px 0;
   }
 }

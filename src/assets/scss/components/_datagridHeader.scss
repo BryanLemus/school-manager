@@ -2,15 +2,15 @@
   background-color: hsl(0, 0%, 97%);
   border-collapse: collapse;
   text-align: left;
-  padding: $spacing * 1.2 $spacing;
+  padding: 16px;
   font-weight: 400;
   color: hsl(0, 0%, 40%);
   position: sticky;
   top: 0;
   &:first-child {
-    border-radius: $spacing 0 0 $spacing;
+    border-radius: 12px 0 0 12px;
   }
   &:last-child {
-    border-radius: 0 $spacing $spacing 0;
+    border-radius: 0 12px 12px 0;
   }
 }

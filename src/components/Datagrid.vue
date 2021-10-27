@@ -8,13 +8,16 @@
   >
     <table>
       <thead>
-        <tr class="Datagrid-row">
+        <datagrid-row>
+          <th class="DatagridHeader">
+            <input type="checkbox" />
+          </th>
           <datagrid-header
             v-for="header in headers"
             :key="header.value"
             :text="header.text"
           />
-        </tr>
+        </datagrid-row>
       </thead>
       <tbody>
         <datagrid-row
@@ -23,6 +26,9 @@
           :selected="this.selection.includes(item)"
           @click="select(item)"
         >
+          <datagrid-cell>
+            <input :checked="this.selection.includes(item)" type="checkbox" />
+          </datagrid-cell>
           <datagrid-cell
             v-for="header in headers"
             :key="header.value"

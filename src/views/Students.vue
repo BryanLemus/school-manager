@@ -1,31 +1,43 @@
 <template>
   <div class="students">
     <toolbar>
-      <label class="headline5">Students</label>
       <flat-button icon="plus" label="New student" />
-      <flat-button icon="exchange-alt" label="Move" />
       <input-box placeholder="find students" type="search" />
     </toolbar>
 
     <div id="groups_list">
+      <label class="headline6">Academic Log</label>
       <labeler label="School Year:">
         <arrow-select
           value="2022"
-          :items="[2022, 2023, 2024, 2025, 2026, 2027, 2028]"
+          :items="[
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025,
+            2026,
+            2027,
+            2028,
+          ]"
         />
       </labeler>
-      <div class="paper">
-        <list-view :items="groups">
-          <template v-slot:model="slotProps">
-            <labeler :label="slotProps.item.grade">
-              <label v-if="slotProps.item.speciality">{{
-                slotProps.item.speciality + " · "
-              }}</label>
-              <label> {{ "Section " + slotProps.item.section }}</label>
-            </labeler>
-          </template>
-        </list-view>
-      </div>
+
+      <list-view :items="groups">
+        <template v-slot:model="slotProps">
+          <labeler :label="slotProps.item.grade">
+            <label v-if="slotProps.item.speciality">{{
+              slotProps.item.speciality + " · "
+            }}</label>
+            <label> {{ "Section " + slotProps.item.section }}</label>
+          </labeler>
+        </template>
+      </list-view>
     </div>
 
     <datagrid
