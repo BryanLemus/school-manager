@@ -7,7 +7,7 @@
     </div>
 
     <!--Edit State-->
-    <div v-if="editState" class="DatagridCell-editState">
+    <div v-if="editState && editable" class="DatagridCell-editState">
       <slot name="cellEdit" :value="value" />
       <input
         class="DatagridCell-input"
@@ -36,10 +36,11 @@ export default defineComponent({
   },
   methods: {
     edit() {
+      if (!this.editable) return;
       this.editState = true;
-      this.$nextTick(() => {
-        this.$el.querySelector(".DatagridCell-input").focus();
-      });
+      this.$nextTick(() =>
+        this.$el.querySelector(".DatagridCell-input").focus()
+      );
     },
   },
 });

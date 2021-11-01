@@ -1,11 +1,5 @@
 <template>
-  <div
-    class="Datagrid"
-    :class="{
-      'Datagrid-selectable':
-        selectMode === 'single' || selectMode === 'multiple',
-    }"
-  >
+  <div class="Datagrid" :class="{ 'Datagrid-select': mode === 'select' }">
     <table>
       <thead>
         <datagrid-row>
@@ -21,7 +15,7 @@
       </thead>
       <tbody>
         <datagrid-row
-          v-for="item in items"
+          v-for="item in paginate"
           :key="item.id"
           :selected="this.selection.includes(item)"
           @click="select(item)"
@@ -61,6 +55,7 @@ export default defineComponent({
   data() {
     return {
       selection: this.items.filter((item) => this.value?.includes(item)),
+      currentPage: this.page,
     };
   },
   props: {
@@ -76,15 +71,20 @@ export default defineComponent({
       default: [],
     },
     propKey: { type: String, default: "id" },
+    mode: {
+      type: String,
+      default: "none",
+      validator: (mode: string) => ["select", "edit", "none"].includes(mode),
+    },
     selectMode: {
       type: String,
       default: "none",
       validator: (selectMode: string) =>
-        ["single", "multiple", "none"].includes(selectMode),
+        ["single", "multiple"].includes(selectMode),
     },
     sortBy: { type: Array as () => string[], default: ["id"] },
     groupBy: String,
-    itemsPerPage: { type: Number },
+    itemsPerPage: { type: Number, default: 0, required: false },
     page: { type: Number, default: 1 },
   },
   methods: {
@@ -103,10 +103,16 @@ export default defineComponent({
             : // else, add to selection
               this.selection.push(item);
           break;
-
-        default:
-          break;
       }
+    },
+  },
+  computed: {
+    paginate(): unknown[] | undefined {
+      let itemsPerPage = this.itemsPerPage;
+      let startItem = this.currentPage * itemsPerPage - itemsPerPage;
+      return (itemsPerPage = 0) && (startItem = 0)
+        ? this.items.slice(startItem, startItem + itemsPerPage)
+        : this.items;
     },
   },
 });

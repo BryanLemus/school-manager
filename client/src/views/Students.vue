@@ -1,10 +1,5 @@
 <template>
   <div class="students">
-    <toolbar>
-      <flat-button icon="plus" label="New student" />
-      <input-box placeholder="find students" type="search" />
-    </toolbar>
-
     <div id="groups_list">
       <label class="headline6">Academic Log</label>
       <labeler label="School Year:">
@@ -40,15 +35,27 @@
       </list-view>
     </div>
 
-    <datagrid
-      :items="students"
-      :headers="[
-        { text: 'NIE', value: 'nie' },
-        { text: 'First Name', value: 'firstname' },
-        { text: 'Last Name', value: 'lastname' },
-      ]"
-      selectMode="multiple"
-    />
+    <toolbar>
+      <flat-button icon="plus" label="New student" />
+      <input-box placeholder="find students" type="search" />
+    </toolbar>
+
+    <pages-view>
+      <page value="students" header="Students">
+        <datagrid
+          :items="students"
+          :headers="[
+            { text: 'NIE', value: 'nie' },
+            { text: 'First Name', value: 'firstname' },
+            { text: 'Last Name', value: 'lastname' },
+          ]"
+          select-mode="multiple"
+        />
+      </page>
+      <page value="schedules" header="Schedules" />
+      <page value="degrees" header="Degrees" />
+      <page value="fees" header="Fees" />
+    </pages-view>
   </div>
 </template>
 
@@ -61,6 +68,8 @@ import ListView from "@/components/ListView.vue";
 import ArrowSelect from "@/components/ArrowSelect.vue";
 import Labeler from "@/components/Labeler.vue";
 import Datagrid from "@/components/Datagrid.vue";
+import PagesView from "@/components/PagesView.vue";
+import Page from "@/components/Page.vue";
 
 export default defineComponent({
   components: {
@@ -71,6 +80,8 @@ export default defineComponent({
     ArrowSelect,
     Labeler,
     Datagrid,
+    PagesView,
+    Page,
   },
   name: "Students",
   data() {
